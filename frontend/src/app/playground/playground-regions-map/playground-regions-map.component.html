@@ -1,0 +1,44 @@
+<div class="map-actions">
+  <div class="zoom">
+    <a class="btn" (click)="zoomIn()">+</a>
+    <a class="btn" (click)="zoomOut()">-</a>
+  </div>
+</div>
+
+<div class="map" (wheel)="onWheel($event)">
+  <div class="tint">
+    <h2>Naciśnij CTRL i przewiń, by przybliżyć mapę</h2>
+  </div>
+
+  <!-- Placeholder displayed until map data is fetched -->
+  <svg *ngIf="!provincesData" [attr.viewBox]="VIEW_BOX"></svg>
+
+  <svg 
+    [attr.viewBox]="VIEW_BOX"
+    [style.transform]="svgTransform"
+    (dblclick)="dblzoom($event)"
+    (pan)="onPan($event)"
+    (panEnd)="onPanEnd($event)"
+    (click)="isTintVisible = false"
+  >
+    <g 
+      *ngFor="let province of provincesData" 
+      [attr.name]="province.name"
+    >
+      <path 
+        class="county" 
+        *ngFor="let county of province.counties" 
+        [attr.name]="county.name">
+      </path>
+
+      <path 
+        class="province" 
+        [attr.d]="province.path">
+      </path>
+
+    </g>
+  </svg>
+
+
+
+</div>

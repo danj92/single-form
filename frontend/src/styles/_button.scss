@@ -1,0 +1,147 @@
+@import "./responsive";
+
+:root {
+  --btn-font-size: var(--font-small);
+  --btn-text-color: var(--secondary);
+  --btn-background: white;
+  --btn-hover: var(--secondary-very-light);
+  --btn-pressed: var(--secondary);
+  --btn-focus-border: var(--secondary);
+  --btn-disabled: var(--content);
+  --btn-border-color:  var(--secondary);
+  --btn-radius: var(--border-radius);
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--btn-border-color);
+  position: relative;
+  text-align: center;
+  outline: none;
+  padding: 0 10px;
+  height: var(--input-size);
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  background-color: var(--btn-background);
+  color: var(--btn-text-color);
+  font-size: var(--btn-font-size);
+  transition: 0.2s ease-out;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-family: var(--font-family);
+  border-radius: 0.001px; // fixes Chrome laggy animation
+  font-weight: 400;
+
+  &[disabled] {
+    --btn-text-color: var(--content-very-dark);
+    opacity: 0.8;
+    background-color: var(--btn-disabled);
+    border: 1px solid var(--content-dark);
+    cursor: not-allowed;
+  }
+  i {
+    font-size: 19px;
+    margin-right: 10px;
+    color: var(--btn-text-color);
+  }
+}
+
+.btn-primary {
+  --btn-background: var(--primary);
+  --btn-hover: var(--primary-light);
+  --btn-pressed: var(--primary-dark);
+  --btn-focus-border: var(--primary-dark);
+  --btn-font-size: var(--font-smaller);
+  --btn-text-color: white;
+  --input-size: 40px;
+  --btn-border-color: transparent;
+  border-radius: var(--btn-radius);
+  padding: 0 50px;
+}
+
+.btn-cta {
+  --btn-font-size: var(--font-medium);
+  --btn-background: var(--primary);
+  --btn-hover: var(--primary-light);
+  --btn-pressed: var(--primary-dark);
+  --btn-focus-border: var(--primary-dark);
+  --btn-text-color: white;
+  --input-size: 58px;
+  --btn-border-color: transparent;
+  letter-spacing: var(--font-spacing-medium);
+  font-weight: bolder;
+  border-radius: var(--btn-radius);
+  width: 370px;
+  max-width: 100%;
+}
+
+.btn-action {
+  --input-size: 28px;
+  --btn-radius: 3px;
+
+  padding: 0 40px;
+  border-radius: var(--btn-radius);
+}
+
+.btn-danger {
+  --btn-background: var(--warning);
+  --btn-hover: var(--warning-light);
+  --btn-pressed: var(--warning-dark);
+  --btn-focus-border: var(--warning-dark);
+  --btn-radius: 3px;
+  --btn-disabled: var(--content);
+  --btn-border: var(--content-dark);
+  --btn-text-color: white;
+  --btn-border-color: transparent;
+  border-radius: var(--btn-radius);
+
+}
+
+.btn-primary-color {
+  --btn-background: var(--primary);
+  --btn-hover: var(--primary-light);
+  --btn-pressed: var(--primary-dark);
+  --btn-focus-border: var(--primary-dark);
+  --btn-text-color: white;
+  --btn-border-color: transparent;
+}
+
+.btn-border-color {
+  --btn-background: var(--content-very-light);
+  --btn-hover: var(--primary-light);
+  --btn-pressed: var(--primary-dark);
+  --btn-focus-border: var(--primary-dark);
+
+  --btn-text-color: var(--primary);
+  --btn-border-color: var(--primary);
+}
+
+.btn-max-width {
+  width: 100%;
+}
+
+.btn-icon-only {
+  border-radius: 0;
+  padding: 0;
+  width: var(--input-size);
+  height: var(--input-size);
+  border-radius: 0.001px; // fixes Chrome laggy animation
+  i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0;
+  }
+}
+
+.btn-info {
+  --btn-background: var(--secondary);
+  --btn-hover: var(--secondary-light);
+  --btn-pressed: var(--secondary);
+  --btn-focus-border: var(--secondary);
+  --btn-text-color: white;
+}

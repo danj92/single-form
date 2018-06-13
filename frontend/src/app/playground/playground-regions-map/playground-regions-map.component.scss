@@ -1,0 +1,91 @@
+:host {
+    --map-transition: 0.1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    &.panning svg {
+      cursor: -webkit-grabbing;
+      cursor: grabbing;
+    }
+    &.tinted {
+      .map .tint {
+        opacity: 1;
+      }
+    }
+    .map-actions {
+      background-color: var(--content);
+      padding: 8px 11px;
+      display: flex;
+      justify-content: space-between;
+      .zoom {
+        a:first-child {
+          margin-right: 10px;
+        }
+      }
+      .region-name {
+        flex-grow: 1;
+        text-align: center;
+      }
+    }
+  
+    .map {
+      overflow: hidden;
+      position: relative;
+      background-color: white;
+      .tint {
+        opacity: 0;
+        transition: 0.3s;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.45);
+        z-index: 1;
+        color: var(--content-very-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+      }
+    }
+  
+    svg {
+      // width: 100%;
+      max-height: 550px;
+      // transition: var(--map-transition);
+      // &.province-selected g:not(.focused) path.province {
+      //   fill: rgba(0, 0, 0, 0.04) !important;
+      // }
+      cursor: pointer;
+      g {
+        fill: var(--primary);
+        // transform-origin: center;
+        &.focused {
+          .county {
+            stroke: white;
+            &:not(.selected) {
+              opacity: 0.6;
+            }
+          }
+          .province {
+            pointer-events: none;
+            stroke-width: 3px;
+            fill: transparent !important;
+          }
+        }
+        // path {
+        //   stroke-width: 1px;
+        // }
+        .county {
+          stroke: var(--primary);
+        }
+        .province {
+          fill: inherit;
+          stroke: white;
+        }
+        // path:hover {
+        //   fill: var(--primary-light)!important;
+        // }
+      }
+    }
+  }
+  

@@ -1,0 +1,15 @@
+:host {
+  background: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  p {
+    color: white;
+  }
+  a {
+    img {
+      width: 80%;
+    }
+  }
+}

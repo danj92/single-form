@@ -1,0 +1,16 @@
+@import '../../../styles/responsive';
+
+:host {
+  flex-grow: 1;
+  display: flex;
+  > article {
+    padding: 20px;
+    flex-grow: 1;
+  }
+  @include mobile-only {
+    flex-direction: column;
+    > article {
+      padding: 10px 0;
+    }
+  }
+}

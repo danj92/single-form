@@ -1,0 +1,18 @@
+table {
+  width: 100%;
+  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--primary);
+    color: var(--content);
+  }
+  td,
+  th {
+    border: 1px solid var(--content-light);
+    padding: 8px;
+  }
+  tr:hover {
+    background-color: var(--content-light);
+  }
+}

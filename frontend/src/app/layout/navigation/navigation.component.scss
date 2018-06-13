@@ -1,0 +1,23 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  .logo {
+    a {
+      img {
+        width: 90%;
+      }
+    }
+  }
+  .title {
+    h1 {
+      font-weight: normal;
+      color: var(--secondary);
+      font-size: 50px;
+      border-right: 2px solid #675aa6;
+      padding-right: 35px;
+      border-radius: 50%;
+    }
+  }
+}

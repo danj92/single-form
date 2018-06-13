@@ -1,0 +1,31 @@
+@import '../../../styles/responsive';
+
+:host {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--secondary-dark);
+    a {
+      padding: 10px 5px;
+      color: var(--primary);
+      text-align: center;
+      &.active {
+        background-color: white;
+        color: var(--secondary);
+      }
+    }
+    @include tablet-portrait-and-up {
+      flex-direction: column;
+      a {
+        padding: 15px 10px;
+      }
+    }
+    @include mobile-only {
+      justify-content: space-between;
+      a {
+        flex: 1;
+        &:not(:last-child) {
+          border-right: 1px solid darken(#9fadb5, 10%);
+        }
+      }
+    }
+  }

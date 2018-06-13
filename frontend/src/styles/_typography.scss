@@ -1,0 +1,54 @@
+:root {
+  --font-small: 12px;
+  --font-smaller: 14px;
+  --font-normal: 16px;
+  --font-normal-big: 18px;
+  --font-bigger: 20px;
+  --font-medium: 24px;
+  --font-large: 34px;
+  --font-big: 40px;
+  --font-huge: 70px;
+}
+
+body {
+  font-size: var(--font-normal);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1 {
+    font-size: var(--font-huge);
+    margin-bottom: 35px;
+  }
+  
+  h2 {
+    font-size: var(--font-large);
+    margin-bottom: 28px;
+  }
+  
+  h3 {
+    font-size: var(--font-medium);
+    margin-bottom: 22px;
+  }
+  
+  h4 {
+    font-size: var(--form-bigger);
+    margin-bottom: 18px;
+  }
+  
+  h5 {
+    font-size: var(--font-normal);
+    margin-bottom: 12px;
+  }
+  
+  h6 {
+    font-size: var(--font-smaller);
+    margin-bottom: 8px;
+  }
