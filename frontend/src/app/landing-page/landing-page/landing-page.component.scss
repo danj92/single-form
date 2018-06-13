@@ -6,4 +6,17 @@
       padding: 22px 20px;
     }
   }
+  .location {
+    display: flex;
+    justify-content: center;
+    .radio-title {
+      &:last-of-type {
+        padding-left: 20px;
+      }
+    }
+  }
+  .range {
+    border-left: 3px solid #675aa6;
+    padding-left: 25px;
+  }
 }
