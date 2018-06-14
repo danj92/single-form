@@ -6,49 +6,69 @@
   --form-margin-bottom: calc(var(--input-font-size) * 1.7);
 }
 
-@mixin label-transformed {
-  transform: translateY(-110%);
-  line-height: initial;
-  pointer-events: all;
-}
-
-.label {
-  white-space: nowrap;
-  color: var(--form-label-color);
-  max-width: 100%;
-  display: inline-flex;
-  .text {
-    overflow-x: hidden;
-    text-overflow: ellipsis;
-    &::first-letter {
-      text-transform: capitalize;
-    }
-  }
-}
-
 label {
   display: block;
-  position: relative;
   font-size: var(--input-font-size);
   margin-bottom: var(--form-margin-bottom);
-  >.label {
-    position: absolute;
-    transition: 0.2s;
-    transform-origin: left;
-    top: 0;
-    left: 0;
-    padding: 0 var(--input-padding);
-    pointer-events: none;
+  color: var(--font-color);
+  line-height: 25px;
+  .label {
+    padding-bottom: 5px;
   }
 }
 
-.focused,
-.filled,
-.touched.invalid {
-  label>.label {
-    @include label-transformed;
-  }
-} // Animation input autocomplete for Chrome
-*:-webkit-autofill+.label {
-  @include label-transformed;
+input[type="text"] {
+  border: 1px solid var(--content-dark);
+  outline: none;
+  padding: 7px;
+  color: var(--font-color);
 }
+
+
+
+// @mixin label-transformed {
+//   transform: translateY(-110%);
+//   line-height: initial;
+//   pointer-events: all;
+// }
+
+// .label {
+//   white-space: nowrap;
+//   color: var(--form-label-color);
+//   max-width: 100%;
+//   display: inline-flex;
+//   .text {
+//     overflow-x: hidden;
+//     text-overflow: ellipsis;
+//     &::first-letter {
+//       text-transform: capitalize;
+//     }
+//   }
+// }
+
+// label {
+  // display: block;
+  // position: relative;
+  // font-size: var(--input-font-size);
+  // margin-bottom: var(--form-margin-bottom);
+  // >.label {
+  //   position: absolute;
+  //   transition: 0.2s;
+  //   transform-origin: left;
+  //   top: 0;
+  //   left: 0;
+  //   padding: 0 var(--input-padding);
+  //   pointer-events: none;
+  // }
+// }
+
+// .focused,
+// .filled,
+// .touched.invalid {
+//   label>.label {
+//     @include label-transformed;
+//   }
+// }
+// *:-webkit-autofill+.label {
+//   @include label-transformed;
+// }

@@ -1,57 +1,72 @@
 <div class="container">
 
-  <div>
-    <h3>Dane przedsiębiorstwa</h3>
+  <form
+    [formGroup]="formGroup" 
+    (ngSubmit)="onSubmit()"
+  >
 
-    <label>
-      Nazwa przedsiębiorstwa
-      <input type="text">
-    </label>
+    <div class="data-company">
+      <h3>Dane przedsiębiorstwa</h3>
 
-    <label>
-      Ulica
-      <input type="text">
-    </label>
-  </div>
+      <label>
+        <div class="label">
+          Nazwa przedsiębiorstwa
+        </div>
+        <input type="text" formControlName="companyName">
+        <!-- <span *ngIf="formGroup.controls.companyName.errors.required"> Pole jest puste</span> -->
+        <app-form-errors [control]="formGroup.controls.companyName"></app-form-errors>
+      </label>
 
-  <div>
 
-    <h3>Wybierz lokalizacje i zakresy audytów:</h3>
+      <label>
+        <div class="label">
+          Ulica
+        </div>
+        <input type="text" formControlName="street">
+      </label>
+
+    </div>
 
     <div class="location">
-      <div class="radio-title">
+
+      <h3>Wybierz lokalizacje i zakresy audytów:</h3>
+
+      <div class="select-locations">
+
         <label>
           Main office (incl. production)
           <input type="radio">
         </label>
-      </div>
 
 
-
-      <div class="radio-title">
         <label>
           Production location
           <input type="radio">
         </label>
+
       </div>
+
+      <div class="data-location">
+
+        <label>
+          <input type="checkbox"> Zakres: Produkcja mieszanek paszowych
+        </label>
+        <label>
+          <input type="checkbox"> Zakres: Produkcja mieszanek paszowych bez stosowania krytycznych dodatków paszowych i krytycznych weterynaryjnych
+          produktów medycznych
+        </label>
+        <label>
+          <input type="checkbox"> Zakres: Produkcja premiksów
+        </label>
+
+      </div>
+
     </div>
 
-    <div class="range">
-      <label>
-        <input type="checkbox"> Zakres: Produkcja mieszanek paszowych
-      </label>
-      <label>
-        <input type="checkbox"> Zakres: Produkcja mieszanek paszowych bez stosowania krytycznych dodatków paszowych i krytycznych weterynaryjnych produktów medycznych 
-      </label>
-      <label>
-        <input type="checkbox">  Zakres: Produkcja premiksów 
-      </label>
-
-    </div>
+    <button class="btn btn-primary">Wyślij ankietę</button>
+  </form>
 
 
-
-  </div>
 
 
 </div>

@@ -5,18 +5,18 @@
       color: var(--secondary);
       padding: 22px 20px;
     }
-  }
-  .location {
-    display: flex;
-    justify-content: center;
-    .radio-title {
-      &:last-of-type {
-        padding-left: 20px;
+    .location {
+      .select-locations {
+        display: flex;
+        justify-content: center;
+        label:last-of-type {
+          padding-left: 20px;
+        }
+      }
+      .data-location {
+        border-left: 3px solid #675aa6;
+        padding-left: 25px;
       }
     }
-  }
-  .range {
-    border-left: 3px solid #675aa6;
-    padding-left: 25px;
   }
 }
