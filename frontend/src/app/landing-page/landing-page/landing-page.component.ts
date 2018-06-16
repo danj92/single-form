@@ -1,36 +1,32 @@
-import { Component, OnInit, Input, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormControl, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
-
-import { ChildComponent } from '../child/child.component';
+import { DataService } from '../../shared/data.service';
 
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.scss']
 })
-export class LandingPageComponent implements AfterViewInit {
-
-  message = 'hello world';
-
-  @ViewChild(ChildComponent) child;
+export class LandingPageComponent implements OnInit {
 
   formGroup: FormGroup;
+
+  message: string;
 
   constructor(
     private router: Router,
     private fb: FormBuilder,
+    private data: DataService,
   ) { }
 
-  // ngOnInit() {
-  //   this.formGroup = this.fb.group({
-  //     companyName: new FormControl('', Validators.required),
-  //     street: new FormControl('', Validators.required)
-  //   });
-  // }
+  ngOnInit() {
+    this.formGroup = this.fb.group({
+      companyName: new FormControl('', Validators.required),
+      street: new FormControl('', Validators.required)
+    });
 
-  ngAfterViewInit() {
-    this.message = this.child.message;
+    this.data.currentMessage.subscribe(message => this.message = message);
   }
 
   onSubmit() {
@@ -38,11 +34,6 @@ export class LandingPageComponent implements AfterViewInit {
     const formData = this.formGroup.value;
 
     // this.router.navigate(['/result']);
-  }
-
-  receiveMessage($event) {
-    this.message = $event;
-    console.log($event);
   }
 
 }

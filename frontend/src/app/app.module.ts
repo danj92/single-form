@@ -9,6 +9,7 @@ import { LandingPageModule } from 'app/landing-page';
 import { LayoutModule } from 'app/layout';
 import { ArtFormsModule } from 'app/forms';
 import { PlaygroundModule } from 'app/playground';
+import { SharedModule } from 'app/shared';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { PlaygroundModule } from 'app/playground';
     LayoutModule,
     ArtFormsModule,
     PlaygroundModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
