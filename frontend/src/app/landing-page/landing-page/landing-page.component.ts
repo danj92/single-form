@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class LandingPageComponent implements OnInit {
 
-  message = 'hellow world';
+  message = 'hello world';
 
   formGroup: FormGroup;
 
@@ -30,6 +30,11 @@ export class LandingPageComponent implements OnInit {
     const formData = this.formGroup.value;
 
     // this.router.navigate(['/result']);
+  }
+
+  receiveMessage($event) {
+    this.message = $event;
+    console.log($event);
   }
 
 }
