@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, Validators, FormControl, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./landing-page.component.scss']
 })
 export class LandingPageComponent implements OnInit {
+
+  message = 'hellow world';
 
   formGroup: FormGroup;
 

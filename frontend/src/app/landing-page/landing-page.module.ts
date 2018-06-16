@@ -11,6 +11,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 
 import { landingPageRoutes } from './landing-page.routing';
 import { ResultComponent } from './result/result.component';
+import { ChildComponent } from './child/child.component';
+
 
 
 @NgModule({
@@ -25,6 +27,7 @@ import { ResultComponent } from './result/result.component';
     declarations: [
         LandingPageComponent,
         ResultComponent,
+        ChildComponent,
     ],
     exports: [
         LandingPageComponent,
