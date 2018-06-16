@@ -14,6 +14,9 @@ export class LandingPageComponent implements OnInit {
 
   message: string;
 
+  name = 'Tom';
+  age = 25;
+  
   constructor(
     private router: Router,
     private fb: FormBuilder,

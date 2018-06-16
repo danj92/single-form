@@ -9,6 +9,9 @@ import { DataService } from '../../shared/data.service';
 })
 export class ChildComponent implements OnInit {
 
+  @Input() userName: string;
+  @Input() userAge: number;
+
   message: string;
 
   constructor(private data: DataService) { }
