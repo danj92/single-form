@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { FormGroup, Validators, FormControl, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
-import { DataService } from '../../shared/data.service';
+import { DataFormService } from '../../shared/data-form.service';
+
 
 @Component({
   selector: 'app-landing-page',
@@ -10,14 +11,16 @@ import { DataService } from '../../shared/data.service';
 })
 export class LandingPageComponent implements OnInit {
 
+  @Input() formData;
+
   formGroup: FormGroup;
 
-
+  // @Output() sendDataForm = new EventEmitter<DataBlock>();
 
   constructor(
     private router: Router,
     private fb: FormBuilder,
-    private data: DataService,
+    private dataForm: DataFormService,
   ) { }
 
   ngOnInit() {
@@ -30,13 +33,11 @@ export class LandingPageComponent implements OnInit {
 
   onSubmit() {
 
-    const formData = this.formGroup.value;
+    const data = this.formGroup.value;
 
-    // console.log(formData);
+    this.dataForm.setDataForm(data.companyName, data.street);
 
-    this.data.getFormValue(formData);
-
-    // this.router.navigate(['/result']);
+    this.router.navigate(['/result']);
   }
 
 }

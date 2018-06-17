@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 
-import { DataService } from './data.service';
+import { DataFormService } from './data-form.service';
 
 @NgModule({
     imports: [
@@ -13,7 +13,7 @@ import { DataService } from './data.service';
 
     ],
     providers: [
-        DataService,
+        DataFormService,
     ],
 })
 
