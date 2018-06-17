@@ -8,6 +8,8 @@ import { LandingPageModule } from 'app/landing-page';
 import { FooterComponent } from './footer/footer.component';
 import { NavigationComponent } from './navigation/navigation.component';
 
+import { layoutRoutes } from './layout.routing';
+
 @NgModule({
     declarations: [
         FooterComponent,
@@ -15,7 +17,7 @@ import { NavigationComponent } from './navigation/navigation.component';
     ],
     imports: [
         BrowserModule,
-        RouterModule,
+        RouterModule.forRoot(layoutRoutes),
         LandingPageModule,
     ],
     exports: [

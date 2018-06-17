@@ -12,11 +12,8 @@ export class LandingPageComponent implements OnInit {
 
   formGroup: FormGroup;
 
-  message: string;
 
-  name = 'Tom';
-  age = 25;
-  
+
   constructor(
     private router: Router,
     private fb: FormBuilder,
@@ -29,12 +26,15 @@ export class LandingPageComponent implements OnInit {
       street: new FormControl('', Validators.required)
     });
 
-    this.data.currentMessage.subscribe(message => this.message = message);
   }
 
   onSubmit() {
 
     const formData = this.formGroup.value;
+
+    // console.log(formData);
+
+    this.data.getFormValue(formData);
 
     // this.router.navigate(['/result']);
   }
