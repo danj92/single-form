@@ -5,6 +5,14 @@
       color: var(--secondary);
       padding: 22px 20px;
     }
+
+    .data-company {
+      .left,
+      .right {
+        display: inline-block;
+      }
+    }
+
     .location {
       .select-locations {
         display: flex;

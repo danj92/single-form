@@ -1,29 +1,87 @@
 <div class="container">
 
-  <form
-    [formGroup]="formGroup" 
-    (ngSubmit)="onSubmit()"
-  >
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
 
     <div class="data-company">
       <h3>Dane przedsiębiorstwa</h3>
 
-      <label>
-        <div class="label">
-          Nazwa przedsiębiorstwa
-        </div>
-        <input type="text" formControlName="companyName">
-        <!-- <span *ngIf="formGroup.controls.companyName.errors.required"> Pole jest puste</span> -->
-        <app-form-errors [control]="formGroup.controls.companyName"></app-form-errors>
-      </label>
+      <div class="left">
+        <label>
+          <div class="label">
+            Nazwa przedsiębiorstwa
+          </div>
+          <input type="text" formControlName="companyName">
+          <!-- <span *ngIf="formGroup.controls.companyName.errors.required"> Pole jest puste</span> -->
+          <app-form-errors [control]="formGroup.controls.companyName"></app-form-errors>
+        </label>
 
 
-      <label>
-        <div class="label">
-          Ulica
-        </div>
-        <input type="text" formControlName="street">
-      </label>
+        <label>
+          <div class="label">
+            Ulica
+          </div>
+          <input type="text" formControlName="street">
+        </label>
+
+        <label>
+          <div class="label">
+            Kraj/kod pocztowy/miasto
+          </div>
+          <input type="text">
+        </label>
+
+        <label>
+          <div class="label">
+            NIP
+          </div>
+          <input type="text">
+        </label>
+
+        <label>
+          <div class="label">
+            Osoba do kontaktu
+          </div>
+          <input type="text">
+        </label>
+      </div>
+
+      <div class="right">
+        <label>
+          <div class="label">
+            Telefon/Fax
+          </div>
+          <input type="text">
+        </label>
+
+        <label>
+          <div class="label">
+            Numer telefonu 24/7
+          </div>
+          <input type="text">
+        </label>
+
+        <label>
+          <div class="label">
+            Manager ds. Zarządzania krysysowego
+          </div>
+          <input type="text">
+        </label>
+
+        <label>
+          <div class="label">
+            Email
+          </div>
+          <input type="text">
+        </label>
+
+        <label>
+          <div class="label">
+            KRS/CEIDG
+          </div>
+          <input type="text">
+        </label>
+      </div>
+
 
     </div>
 
@@ -63,7 +121,7 @@
 
     </div>
 
-    <button class="btn btn-primary" (sendDataForm)="myData($event)">Wyślij ankietę</button>
+    <button class="btn btn-primary">Wyślij ankietę</button>
   </form>
 
 
