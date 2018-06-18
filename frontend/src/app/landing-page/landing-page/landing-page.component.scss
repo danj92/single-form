@@ -7,9 +7,11 @@
     }
 
     .data-company {
+      display: flex;
       .left,
       .right {
-        display: inline-block;
+        width: 100%;
+        padding: 20px;
       }
     }
 

@@ -8,6 +8,7 @@
 
 label {
   display: block;
+  position: relative;
   font-size: var(--input-font-size);
   margin-bottom: var(--form-margin-bottom);
   color: var(--font-color);
@@ -17,11 +18,18 @@ label {
   }
 }
 
+app-form-errors {
+  position: absolute;
+  left: 0;
+  top: 60px;
+}
+
 input[type="text"] {
   border: 1px solid var(--content-dark);
   outline: none;
   padding: 7px;
   color: var(--font-color);
+  width: 100%;
 }
 
 

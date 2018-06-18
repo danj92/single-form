@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RadioGroupComponent } from './radio-group/radio-group.component';
 import { RadioOptionComponent } from './radio-group/radio-option/radio-option.component';
 import { FormErrorsComponent } from './form-errors/form-errors.component';
+import { InputComponent } from './input/input.component';
 
 
 
@@ -13,7 +14,8 @@ import { FormErrorsComponent } from './form-errors/form-errors.component';
     declarations: [
         RadioGroupComponent,
         RadioOptionComponent,
-        FormErrorsComponent
+        FormErrorsComponent,
+        InputComponent
     ],
     imports: [
         BrowserModule,
@@ -27,6 +29,7 @@ import { FormErrorsComponent } from './form-errors/form-errors.component';
         RadioGroupComponent,
         RadioOptionComponent,
         FormErrorsComponent,
+        InputComponent,
     ],
 })
 export class ArtFormsModule { }
