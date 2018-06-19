@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostBinding } from '@angular/core';
 
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
@@ -9,17 +9,20 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class InputComponent implements OnInit {
 
+  @Input() label: string;
+
   @Input() name = '';
 
   @Input() type = '';
 
   @Input('form') formGroup: FormGroup;
 
-  // @Input('formControl') formControl: FormControl;
+  @Input('control') formControl: FormControl;
 
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

@@ -31,9 +31,10 @@ export class LandingPageComponent implements OnInit {
 
     const data = this.formGroup.value;
 
-    this.dataForm.setDataForm(data.companyName, data.street);
+    console.log(data);
+    // this.dataForm.setDataForm(data.companyName, data.street);
 
-    this.router.navigate(['/result']);
+    // this.router.navigate(['/result']);
   }
 
 }
