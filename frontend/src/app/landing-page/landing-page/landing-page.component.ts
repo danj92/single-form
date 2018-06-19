@@ -11,11 +11,7 @@ import { DataFormService } from '../../shared/data-form.service';
 })
 export class LandingPageComponent implements OnInit {
 
-  @Input() formData;
-
   formGroup: FormGroup;
-
-  // @Output() sendDataForm = new EventEmitter<DataBlock>();
 
   constructor(
     private router: Router,

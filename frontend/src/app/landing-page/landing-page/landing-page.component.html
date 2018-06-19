@@ -2,13 +2,12 @@
 
   <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
 
-          <!-- <app-input
+    <app-input
       type="text"
-      name="111111"
-      [formControl]="companyName"
+      name="companyName"
+      [form]="formGroup"
     >
-
-    </app-input> -->
+    </app-input> 
 
     <div class="">
       <h3>Dane przedsiębiorstwa</h3>
@@ -19,7 +18,7 @@
             <div class="label">
               Nazwa przedsiębiorstwa
             </div>
-            <input type="text" formControlName="companyName">
+            <!-- <input type="text" formControlName="companyName"> -->
             <!-- <span *ngIf="formGroup.controls.companyName.errors.required"> Pole jest puste</span> -->
             <app-form-errors [control]="formGroup.controls.companyName"></app-form-errors>
           </label>

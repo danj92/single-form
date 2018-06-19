@@ -13,6 +13,8 @@ export class InputComponent implements OnInit {
 
   @Input() type = '';
 
+  @Input('form') formGroup: FormGroup;
+
   // @Input('formControl') formControl: FormControl;
 
   constructor() { }
