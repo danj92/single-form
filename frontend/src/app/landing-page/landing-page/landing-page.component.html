@@ -10,11 +10,11 @@
       <div class="data-company ">
         <div class="left">
 
-          <app-input 
-            type="text" 
-            name="companyName" 
-            label="Nazwa przedsiębiorstwa" 
-            [form]="formGroup"
+          <app-input
+            type="text"
+            name="companyName"
+            label="Nazwa przedsiębiorstwa"
+            [control]="formGroup.controls.companyName"
           >
           </app-input>
 

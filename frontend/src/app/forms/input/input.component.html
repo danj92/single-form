@@ -1,8 +1,9 @@
 <label>
   <p>{{label}}</p>
-  <input 
+  <input
     [type]="type"
     [name]="name"
+    [formControl]="formControl"
   >
   <app-form-errors [control]="formControl"></app-form-errors>
 </label>
