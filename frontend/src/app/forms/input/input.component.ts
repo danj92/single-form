@@ -15,14 +15,14 @@ export class InputComponent implements OnInit {
 
   @Input() type = '';
 
-  @Input('form') formGroup: FormGroup;
+  // @Input('form') formGroup: FormGroup;
 
   @Input('control') formControl: FormControl;
 
   constructor() { }
 
   ngOnInit() {
-
+    // console.log(this.formControl);
   }
 
 }
