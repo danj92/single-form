@@ -1,9 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 
-const MESSAGES = {
-  required: () => 'To pole jest wymagane.',
-};
+import { VALIDATION_MESSAGES } from '../../landing-page/landing-page/validation-messages';
+
 
 @Component({
   selector: 'app-form-errors',
@@ -24,7 +23,7 @@ export class FormErrorsComponent implements OnInit {
     if (this.control.touched && this.control.errors) {
       return Object.keys(this.control.errors).map(e => {
         const error = this.control.errors[e];
-        return MESSAGES[e] ? MESSAGES[e](error) : error;
+        return VALIDATION_MESSAGES[e] ? VALIDATION_MESSAGES[e](error) : error;
       });
     } else {
       return [];

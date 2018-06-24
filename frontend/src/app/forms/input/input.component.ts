@@ -15,8 +15,6 @@ export class InputComponent implements OnInit {
 
   @Input() type = '';
 
-  // @Input('form') formGroup: FormGroup;
-
   @Input('control') formControl: FormControl;
 
   constructor() { }

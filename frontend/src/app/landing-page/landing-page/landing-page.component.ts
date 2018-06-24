@@ -3,6 +3,8 @@ import { FormGroup, Validators, FormControl, FormBuilder } from '@angular/forms'
 import { Router } from '@angular/router';
 import { DataFormService } from '../../shared/data-form.service';
 
+import { myValidator } from './validators';
+
 
 @Component({
   selector: 'app-landing-page',
@@ -21,7 +23,7 @@ export class LandingPageComponent implements OnInit {
 
   ngOnInit() {
     this.formGroup = this.fb.group({
-      companyName: new FormControl('', Validators.required),
+      companyName: new FormControl('', [Validators.required, myValidator]),
       street: new FormControl('', Validators.required)
     });
 
@@ -36,5 +38,7 @@ export class LandingPageComponent implements OnInit {
 
     // this.router.navigate(['/result']);
   }
+
+
 
 }
