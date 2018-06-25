@@ -1,20 +1,16 @@
 :host {
   .container {
-    h3 {
-      background: var(--content);
-      color: var(--secondary);
-      padding: 22px 20px;
-    }
-
-    .data-company {
-      display: flex;
-      .left,
-      .right {
-        width: 100%;
-        padding: 20px;
+    .data-basic {
+      .data-company {
+        display: flex;
+        align-items: stretch;
+        .left-column,
+        .right-column {
+          width: 100%;
+          padding: 20px;
+        }
       }
     }
-
     .location {
       .select-locations {
         display: flex;

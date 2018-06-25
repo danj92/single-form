@@ -4,11 +4,11 @@
 
 
 
-    <div class="">
-      <h3>Dane przedsiębiorstwa </h3>
+    <div class="data-basic">
+      <app-section-header title="Dane przedsiębiorstwa"></app-section-header>
 
-      <div class="data-company ">
-        <div class="left">
+      <div class="data-company">
+        <div class="left-column">
 
           <app-input
             type="text"
@@ -18,88 +18,86 @@
           >
           </app-input>
 
-          <label>
-            <!-- <div class="label">
-              Nazwa przedsiębiorstwa
-            </div> -->
-            <!-- <input type="text" formControlName="companyName"> -->
-            <!-- <span *ngIf="formGroup.controls.companyName.errors.required"> Pole jest puste</span> -->
-            <!-- <app-form-errors [control]="formGroup.controls.companyName"></app-form-errors> -->
-          </label>
+          <app-input
+            type="text"
+            name="street"
+            label="Ulica"
+            [control]="formGroup.controls.street"
+          >
+          </app-input>
 
+          <app-input
+            type="text"
+            name="country"
+            label="Kraj/kod pocztowy/miasto"
+            [control]="formGroup.controls.country"
+          >
+          </app-input>
 
-          <!-- <label>
-            <div class="label">
-              Ulica
-            </div>
-            <input type="text" formControlName="street">
-          </label> -->
+          <app-input
+            type="text"
+            name="nip"
+            label="NIP"
+            [control]="formGroup.controls.nip"
+          >
+          </app-input>
 
-          <label>
-            <div class="label">
-              Kraj/kod pocztowy/miasto
-            </div>
-            <input type="text">
-          </label>
-
-          <label>
-            <div class="label">
-              NIP
-            </div>
-            <input type="text">
-          </label>
-
-          <label>
-            <div class="label">
-              Osoba do kontaktu
-            </div>
-            <input type="text">
-          </label>
+          <app-input
+            type="text"
+            name="contact"
+            label="Osoba do kontaktu"
+            [control]="formGroup.controls.contact"
+          >
+          </app-input>
         </div>
 
-        <div class="right">
-          <label>
-            <div class="label">
-              Telefon/Fax
-            </div>
-            <input type="text">
-          </label>
+        <div class="right-column">
+            <app-input
+              type="text"
+              name="telephone"
+              label="Telefon/Fax"
+              [control]="formGroup.controls.telephone"
+            >
+            </app-input>
 
-          <label>
-            <div class="label">
-              Numer telefonu 24/7
-            </div>
-            <input type="text">
-          </label>
+            <app-input
+              type="text"
+              name="telephone24"
+              label="Numer telefonu 24/7"
+              [control]="formGroup.controls.telephone24"
+            >
+            </app-input>
 
-          <label>
-            <div class="label">
-              Manager ds. Zarządzania krysysowego
-            </div>
-            <input type="text">
-          </label>
+            <app-input
+              type="text"
+              name="manager"
+              label="Manager ds. Zarządzania krysysowego"
+              [control]="formGroup.controls.manager"
+            >
+            </app-input>
 
-          <label>
-            <div class="label">
-              Email
-            </div>
-            <input type="text">
-          </label>
+            <app-input
+              type="text"
+              name="email"
+              label="Email"
+              [control]="formGroup.controls.email"
+            >
+            </app-input>
 
-          <label>
-            <div class="label">
-              KRS/CEIDG
-            </div>
-            <input type="text">
-          </label>
+            <app-input
+              type="text"
+              name="krs"
+              label="KRS/CEIDG"
+              [control]="formGroup.controls.krs"
+            >
+            </app-input>
+
         </div>
       </div>
-
     </div>
 
     <div class="location">
-
-      <h3>Wybierz lokalizacje i zakresy audytów:</h3>
+      <app-section-header title="Wybierz lokalizacje i zakresy audytów"></app-section-header>
 
       <div class="select-locations">
 

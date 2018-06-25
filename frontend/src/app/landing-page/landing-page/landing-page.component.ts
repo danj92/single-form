@@ -24,7 +24,15 @@ export class LandingPageComponent implements OnInit {
   ngOnInit() {
     this.formGroup = this.fb.group({
       companyName: new FormControl('', [Validators.required, myValidator]),
-      street: new FormControl('', Validators.required)
+      street: new FormControl('', Validators.required),
+      country: new FormControl('', Validators.required),
+      nip: new FormControl('', Validators.required),
+      contact: new FormControl('', Validators.required),
+      telephone: new FormControl('', Validators.required),
+      telephone24: new FormControl('', Validators.required),
+      manager: new FormControl('', Validators.required),
+      email: new FormControl('', [Validators.required, Validators.email]),
+      krs: new FormControl('', Validators.required),
     });
 
   }
@@ -33,10 +41,20 @@ export class LandingPageComponent implements OnInit {
 
     const data = this.formGroup.value;
 
-    console.log(data.companyName, data.street);
-    // this.dataForm.setDataForm(data.companyName, data.street);
+    this.dataForm.setDataForm(
+      data.companyName,
+      data.street,
+      data.country,
+      data.nip,
+      data.contact,
+      data.telephone,
+      data.telephone24,
+      data.manager,
+      data.email,
+      data.krs,
+    );
 
-    // this.router.navigate(['/result']);
+    this.router.navigate(['/result']);
   }
 
 

@@ -12,6 +12,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { landingPageRoutes } from './landing-page.routing';
 import { ResultComponent } from './result/result.component';
 import { ChildComponent } from './child/child.component';
+import { SectionHeaderComponent } from './section-header/section-header.component';
 
 
 
@@ -28,6 +29,7 @@ import { ChildComponent } from './child/child.component';
         LandingPageComponent,
         ResultComponent,
         ChildComponent,
+        SectionHeaderComponent,
     ],
     exports: [
         LandingPageComponent,
