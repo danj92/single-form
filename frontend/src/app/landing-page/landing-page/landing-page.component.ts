@@ -13,6 +13,8 @@ import { myValidator } from './validators';
 })
 export class LandingPageComponent implements OnInit {
 
+  test: string;
+
   formGroup: FormGroup;
 
   constructor(
@@ -38,7 +40,7 @@ export class LandingPageComponent implements OnInit {
   }
 
   onSubmit() {
-
+    const moje = 50;
     const data = this.formGroup.value;
 
     this.dataForm.setDataForm(
