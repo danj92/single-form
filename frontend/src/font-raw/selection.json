@@ -21,11 +21,11 @@
         {}
       ],
       "properties": {
-        "order": 6,
+        "order": 2,
         "id": 12,
         "name": "arrow_left",
         "prevSize": 32,
-        "code": 32
+        "code": 59648
       },
       "setIdx": 0,
       "setId": 0,
@@ -51,7 +51,7 @@
         {}
       ],
       "properties": {
-        "order": 5,
+        "order": 3,
         "id": 11,
         "name": "arrow_right",
         "prevSize": 32,
@@ -109,7 +109,7 @@
         {}
       ],
       "properties": {
-        "order": 3,
+        "order": 5,
         "id": 9,
         "name": "check",
         "prevSize": 32,
@@ -138,7 +138,7 @@
         {}
       ],
       "properties": {
-        "order": 2,
+        "order": 6,
         "id": 8,
         "name": "close",
         "prevSize": 32,
@@ -395,7 +395,7 @@
   ],
   "height": 1024,
   "metadata": {
-    "name": "icomoon"
+    "name": "my-font"
   },
   "preferences": {
     "showGlyphs": true,
@@ -404,9 +404,9 @@
     "showQuickUse2": true,
     "showSVGs": true,
     "fontPref": {
-      "prefix": "icon-",
+      "prefix": "icon-my-font",
       "metadata": {
-        "fontFamily": "icomoon",
+        "fontFamily": "my-font",
         "majorVersion": 1,
         "minorVersion": 0
       },
@@ -416,15 +416,20 @@
         "whitespace": 50
       },
       "embed": false,
-      "showSelector": false,
-      "showMetrics": false
+      "cssVars": true,
+      "cssVarsFormat": "scss",
+      "showSelector": true
     },
     "imagePref": {
       "prefix": "icon-",
       "png": true,
       "useClassSelector": true,
       "color": 0,
-      "bgColor": 16777215
+      "bgColor": 16777215,
+      "classSelector": ".icon",
+      "height": 32,
+      "columns": 16,
+      "margin": 16
     },
     "historySize": 50
   }
