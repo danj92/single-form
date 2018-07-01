@@ -37,8 +37,8 @@ export class LandingPageComponent implements OnInit {
       manager: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.email]),
       krs: new FormControl('', Validators.required),
+      checkbox1: new FormControl(false,  Validators.requiredTrue),
     });
-    this.cd.markForCheck();
   }
 
 
@@ -59,6 +59,7 @@ export class LandingPageComponent implements OnInit {
       data.manager,
       data.email,
       data.krs,
+      data.checkbox1,
     );
 
     this.router.navigate(['/result']);

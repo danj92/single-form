@@ -14,6 +14,7 @@ export class DataFormService {
         manager: '',
         email: '',
         krs: '',
+        checkbox1: '',
     };
 
     setDataForm(
@@ -27,6 +28,7 @@ export class DataFormService {
         manager: string,
         email: string,
         krs: string,
+        checkbox1: string,
     ) {
         this.listDataForm.companyName = companyName;
         this.listDataForm.street = street;
@@ -38,6 +40,7 @@ export class DataFormService {
         this.listDataForm.manager = manager;
         this.listDataForm.email = email;
         this.listDataForm.krs = krs;
+        this.listDataForm.checkbox1 = checkbox1;
     }
 
 }

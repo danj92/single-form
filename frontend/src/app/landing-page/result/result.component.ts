@@ -18,6 +18,7 @@ export class ResultComponent implements OnInit {
   manager: string;
   email: string;
   krs: string;
+  checkbox1: string;
 
   constructor(private dataForm: DataFormService) { }
 
@@ -32,6 +33,7 @@ export class ResultComponent implements OnInit {
     this.manager = this.dataForm.listDataForm.manager;
     this.email = this.dataForm.listDataForm.email;
     this.krs = this.dataForm.listDataForm.krs;
+    this.krs = this.dataForm.listDataForm.checkbox1;
   }
 
 

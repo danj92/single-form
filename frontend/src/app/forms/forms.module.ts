@@ -32,6 +32,7 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
         RadioOptionComponent,
         FormErrorsComponent,
         InputComponent,
+        CheckboxComponent,
     ],
 })
 export class ArtFormsModule { }

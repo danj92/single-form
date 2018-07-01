@@ -32,7 +32,7 @@ export class RadioOptionComponent implements OnInit, RadioOption {
 
   ngOnInit() {
     this.radioGroupService.addOption(this);
-    console.log(this.radioGroupService.initialValue);
+    // console.log(this.radioGroupService.initialValue);
     // console.log(this); // all radiooption
   }
 
