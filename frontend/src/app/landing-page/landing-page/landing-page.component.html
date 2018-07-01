@@ -131,6 +131,29 @@
 
     </div>
 
+    <app-radio-group
+      [value]="businessType"
+      (change)="businessType = $event"
+      >
+      <div class="section">
+        <app-radio-option class="radio-option smaller" value="farm">
+          Prowadzisz gospodarstwo rolne
+        </app-radio-option>
+
+        <app-radio-option class="radio-option smaller" value="trading_company">
+          Prowadzisz działalność handlową (skupującą)
+        </app-radio-option>
+      </div>
+    </app-radio-group>
+
+    <div class="farm">
+      <h1>farm {{businessType}}</h1>
+    </div>
+
+    <div class="trading_company">
+      <h1>trading_company</h1>
+    </div>
+
     <button class="btn btn-primary">Wyślij ankietę</button>
   </form>
 

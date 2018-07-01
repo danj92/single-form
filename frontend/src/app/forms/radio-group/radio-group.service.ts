@@ -14,7 +14,9 @@ export class RadioGroupService {
   options: RadioOption[] = [];
 
   addOption(option: RadioOption) {
+    // console.log(option); // all radiooption
     this.options.push(option);
+    // console.log(this.options);
     if (this.initialValue === option.value) {
       option.isSelected = true;
       this.zone.runOutsideAngular(() => setTimeout(

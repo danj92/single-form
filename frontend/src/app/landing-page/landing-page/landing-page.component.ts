@@ -15,7 +15,10 @@ export class LandingPageComponent implements OnInit {
 
   test: string;
 
+  businessType = 'trading_company';
+
   formGroup: FormGroup;
+
 
   constructor(
     private router: Router,
@@ -36,8 +39,10 @@ export class LandingPageComponent implements OnInit {
       email: new FormControl('', [Validators.required, Validators.email]),
       krs: new FormControl('', Validators.required),
     });
-
   }
+
+
+
 
   onSubmit() {
     const moje = 50;
