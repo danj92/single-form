@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input, ChangeDetectorRef } from '@angular/core';
 import { FormGroup, Validators, FormControl, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DataFormService } from '../../shared/data-form.service';
@@ -13,8 +13,6 @@ import { myValidator } from './validators';
 })
 export class LandingPageComponent implements OnInit {
 
-  test: string;
-
   businessType = 'trading_company';
 
   formGroup: FormGroup;
@@ -24,6 +22,7 @@ export class LandingPageComponent implements OnInit {
     private router: Router,
     private fb: FormBuilder,
     private dataForm: DataFormService,
+    private cd: ChangeDetectorRef
   ) { }
 
   ngOnInit() {
@@ -39,6 +38,7 @@ export class LandingPageComponent implements OnInit {
       email: new FormControl('', [Validators.required, Validators.email]),
       krs: new FormControl('', Validators.required),
     });
+    this.cd.markForCheck();
   }
 
 

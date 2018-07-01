@@ -7,6 +7,7 @@ import { RadioGroupComponent } from './radio-group/radio-group.component';
 import { RadioOptionComponent } from './radio-group/radio-option/radio-option.component';
 import { FormErrorsComponent } from './form-errors/form-errors.component';
 import { InputComponent } from './input/input.component';
+import { CheckboxComponent } from './checkbox/checkbox.component';
 
 
 
@@ -15,7 +16,8 @@ import { InputComponent } from './input/input.component';
         RadioGroupComponent,
         RadioOptionComponent,
         FormErrorsComponent,
-        InputComponent
+        InputComponent,
+        CheckboxComponent
     ],
     imports: [
         BrowserModule,
