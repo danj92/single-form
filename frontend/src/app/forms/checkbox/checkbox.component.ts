@@ -33,7 +33,7 @@ export class CheckboxComponent implements OnInit {
   }
 
   get icon() {
-    return this.formControl.value ? 'yes' : '';
+    return this.formControl.value ? 'check' : '';
   }
 
   @HostListener('click')
