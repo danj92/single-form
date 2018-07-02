@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'art';
+  src:
+    url('/assets/fonts/art.ttf?j45fhy') format('truetype'),
+    url('/assets/fonts/art.woff?j45fhy') format('woff'),
+    url('/assets/fonts/art.svg?j45fhy#art') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-art"], [class*=" icon-art"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'art' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// .icon-artarrow_left:before {
+//   content: "\10ffff";
+// }
+// .icon-artarrow_right:before {
+//   content: "\e901";
+// }
+// .icon-artbell:before {
+//   content: "\e902";
+// }
+// .icon-artcheck:before {
+//   content: "\e903";
+// }
+// .icon-artclose:before {
+//   content: "\e904";
+// }
+// .icon-artdelete:before {
+//   content: "\e905";
+// }
+// .icon-artdownload:before {
+//   content: "\e906";
+// }
+// .icon-artedit:before {
+//   content: "\e907";
+// }
+// .icon-artellipsis:before {
+//   content: "\e908";
+// }
+// .icon-artemail:before {
+//   content: "\e909";
+// }
+// .icon-artenvelope:before {
+//   content: "\e90a";
+// }
+// .icon-artplus:before {
+//   content: "\e90b";
+// }
+// .icon-artwarning:before {
+//   content: "\e90c";
+// }
