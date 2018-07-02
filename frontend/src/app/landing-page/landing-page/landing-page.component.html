@@ -146,13 +146,12 @@
       </div>
     </app-radio-group>
 
-    <!-- <div class="farm" *ngIf="businessType">
-      <h1>farm {{businessType}}</h1>
+    <div class="trading_company" *ngIf="businessType === 'farm'">
+      <h1>farm</h1>
     </div>
-
-    <div class="trading_company" *ngIf="!businessType">
+    <div class="trading_company" *ngIf="businessType === 'trading_company'">
       <h1>trading_company</h1>
-    </div> -->
+    </div>
 
     <app-checkbox
       name="checkbox1"
