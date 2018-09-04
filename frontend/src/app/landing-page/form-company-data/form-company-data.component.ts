@@ -1,32 +1,29 @@
-import { Component, OnInit, Output, EventEmitter, Input, ChangeDetectorRef } from '@angular/core';
-import { FormGroup, Validators, FormControl, FormBuilder } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+
+import { myValidator } from './validators';
 import { DataFormService } from '../../shared/data-form.service';
 
 
-
 @Component({
-  selector: 'app-landing-page',
-  templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.scss']
+  selector: 'app-form-company-data',
+  templateUrl: './form-company-data.component.html',
+  styleUrls: ['./form-company-data.component.scss']
 })
-export class LandingPageComponent implements OnInit {
-
-  businessType = 'trading_company';
+export class FormCompanyDataComponent implements OnInit {
 
   formGroup: FormGroup;
-
 
   constructor(
     private router: Router,
     private fb: FormBuilder,
-    private dataForm: DataFormService,
-    private cd: ChangeDetectorRef
+    private dataFormService: DataFormService,
   ) { }
 
   ngOnInit() {
     this.formGroup = this.fb.group({
-      companyName: new FormControl('', [Validators.required]),
+      companyName: new FormControl('', [Validators.required, myValidator]),
       street: new FormControl('', Validators.required),
       country: new FormControl('', Validators.required),
       nip: new FormControl('', Validators.required),
@@ -40,14 +37,11 @@ export class LandingPageComponent implements OnInit {
     });
   }
 
-
-
-
   onSubmit() {
-    const moje = 50;
+
     const data = this.formGroup.value;
 
-    this.dataForm.setDataForm(
+    this.dataFormService.setDataForm(
       data.companyName,
       data.street,
       data.country,
@@ -63,7 +57,5 @@ export class LandingPageComponent implements OnInit {
 
     this.router.navigate(['/result']);
   }
-
-
 
 }

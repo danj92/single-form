@@ -27,28 +27,100 @@ h1 {
     font-size: var(--font-huge);
     // margin-bottom: 35px;
   }
-  
+
   h2 {
     font-size: var(--font-large);
     // margin-bottom: 28px;
   }
-  
+
   h3 {
     font-size: var(--font-medium);
     // margin-bottom: 22px;
   }
-  
+
   h4 {
     font-size: var(--form-bigger);
     // margin-bottom: 18px;
   }
-  
+
   h5 {
     font-size: var(--font-normal);
     // margin-bottom: 12px;
   }
-  
+
   h6 {
     font-size: var(--font-smaller);
     // margin-bottom: 8px;
+  }
+
+  .small {
+    font-size: var(--font-small);
+  }
+
+  .smaller {
+    font-size: var(--font-smaller);
+  }
+
+  .normal {
+    font-size: var(--font-normal);
+  }
+
+  .normal-big {
+    font-size: var(--font-normal-big);
+  }
+
+  .bigger {
+    font-size: var(--font-bigger);
+  }
+
+  .medium {
+    font-size: var(--font-medium);
+  }
+
+  .large {
+    font-size: var(--font-large);
+  }
+
+  .big {
+    font-size: var(--font-big);
+  }
+
+  .huge {
+    font-size: var(--font-huge);
+  }
+
+  .uppercase {
+    text-transform: uppercase;
+  }
+
+  .light {
+    font-weight: 300;
+  }
+
+  .normal {
+    font-weight: 400;
+  }
+
+  .bold {
+    font-weight: 700;
+  }
+
+  .fat {
+    font-weight: 900;
+  }
+
+  .no-bold {
+    font-weight: 400;
+  }
+
+  .capitalize {
+    text-transform: capitalize;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .justify {
+    text-align: justify;
   }

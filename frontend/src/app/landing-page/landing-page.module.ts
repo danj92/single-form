@@ -13,6 +13,10 @@ import { landingPageRoutes } from './landing-page.routing';
 import { ResultComponent } from './result/result.component';
 import { ChildComponent } from './child/child.component';
 import { SectionHeaderComponent } from './section-header/section-header.component';
+import { FormMixForageComponent } from './form-mix-forage/form-mix-forage.component';
+import { FormMixForageNaturalComponent } from './form-mix-forage-natural/form-mix-forage-natural.component';
+import { FormCompanyDataComponent } from './form-company-data/form-company-data.component';
+
 
 
 
@@ -30,6 +34,9 @@ import { SectionHeaderComponent } from './section-header/section-header.componen
         ResultComponent,
         ChildComponent,
         SectionHeaderComponent,
+        FormMixForageComponent,
+        FormMixForageNaturalComponent,
+        FormCompanyDataComponent,
     ],
     exports: [
         LandingPageComponent,
