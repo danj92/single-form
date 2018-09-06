@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-form-mix-forage',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormMixForageComponent implements OnInit {
 
-  constructor() { }
+  formGroup: FormGroup;
+
+  constructor(
+    private fb: FormBuilder,
+  ) { }
 
   ngOnInit() {
+    this.formGroup = this.fb.group({
+      company1: new FormControl('', Validators.required),
+      company2: new FormControl('', Validators.required),
+    });
   }
 
 }
