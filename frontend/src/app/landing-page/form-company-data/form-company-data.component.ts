@@ -37,4 +37,27 @@ export class FormCompanyDataComponent implements OnInit {
     });
   }
 
+  onSubmit() {
+    // const moje = 50;
+    const data = this.formGroup.value;
+
+    console.log(this.formGroup);
+
+    this.dataFormService.setDataForm(
+      data.companyName,
+      data.street,
+      data.country,
+      data.nip,
+      data.contact,
+      data.telephone,
+      data.telephone24,
+      data.manager,
+      data.email,
+      data.krs,
+      data.checkbox1,
+    );
+
+    this.router.navigate(['/result']);
+  }
+
 }
