@@ -43,19 +43,19 @@ export class FormCompanyDataComponent implements OnInit {
 
     console.log(this.formGroup);
 
-    this.dataFormService.setDataForm(
-      data.companyName,
-      data.street,
-      data.country,
-      data.nip,
-      data.contact,
-      data.telephone,
-      data.telephone24,
-      data.manager,
-      data.email,
-      data.krs,
-      data.checkbox1,
-    );
+    // this.dataFormService.setDataForm(
+    //   data.companyName,
+    //   data.street,
+    //   data.country,
+    //   data.nip,
+    //   data.contact,
+    //   data.telephone,
+    //   data.telephone24,
+    //   data.manager,
+    //   data.email,
+    //   data.krs,
+    //   data.checkbox1,
+    // );
 
     this.router.navigate(['/result']);
   }

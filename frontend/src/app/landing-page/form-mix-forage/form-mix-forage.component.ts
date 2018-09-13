@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 
+import { DataFormService } from '../../shared/data-form.service';
 
 
 @Component({
@@ -16,6 +17,7 @@ export class FormMixForageComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private router: Router,
+    private dataFormService: DataFormService
   ) { }
 
   ngOnInit() {
@@ -27,6 +29,16 @@ export class FormMixForageComponent implements OnInit {
 
   onSubmit() {
     console.log('forage');
+
+
+    const data = this.formGroup.value;
+
+    this.dataFormService.setDataForm(
+      data.company1,
+      data.company2,
+    );
+
     this.router.navigate(['/result']);
+    // this.router.navigate(['/company-data']);
   }
 }
