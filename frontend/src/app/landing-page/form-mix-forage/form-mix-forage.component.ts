@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 
 
@@ -14,6 +15,7 @@ export class FormMixForageComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -23,4 +25,8 @@ export class FormMixForageComponent implements OnInit {
     });
   }
 
+  onSubmit() {
+    console.log('forage');
+    this.router.navigate(['/result']);
+  }
 }
