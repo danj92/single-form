@@ -7,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
+  selectForm = 'form1';
+
   constructor() { }
 
   ngOnInit() {
 
+  }
+
+  selectChangeHandler(event: any) {
+    this.selectForm = event.target.value;
   }
 
 

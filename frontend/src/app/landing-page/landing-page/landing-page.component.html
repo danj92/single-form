@@ -1,3 +1,17 @@
 <div class="container">
-  <app-form-mix-forage></app-form-mix-forage>
+
+  <select (change)="selectChangeHandler($event)">
+    <option value="form1">form1</option>
+    <option value="form2">form2</option>
+    <option value="form3">form3</option>
+  </select>
+
+  <app-form-mix-forage
+    *ngIf="selectForm === 'form1'"
+  ></app-form-mix-forage>
+
+  <app-form-mix-forage-natural
+    *ngIf="selectForm === 'form2'">
+  </app-form-mix-forage-natural>
+
 </div>
