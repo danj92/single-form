@@ -3,9 +3,9 @@
   <select (change)="selectChangeHandler($event)">
     <option value="form1">form1</option>
     <option value="form2">form2</option>
-    <option value="form3">form3</option>
   </select>
 
+  <app-section-header title="Produkcja mieszanek paszowych"></app-section-header>
   <app-form-mix-forage
     *ngIf="selectForm === 'form1'"
   ></app-form-mix-forage>

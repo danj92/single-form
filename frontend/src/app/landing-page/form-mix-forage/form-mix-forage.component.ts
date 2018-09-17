@@ -33,12 +33,10 @@ export class FormMixForageComponent implements OnInit {
 
     const data = this.formGroup.value;
 
-    this.dataFormService.setDataForm(
-      data.company1,
-      data.company2,
-    );
 
-    this.router.navigate(['/result']);
-    // this.router.navigate(['/company-data']);
+    this.dataFormService.setDataForm('company1', this.formGroup.value);
+    this.dataFormService.setDataForm('company2', this.formGroup.value);
+
+    this.router.navigate(['/company-data']);
   }
 }

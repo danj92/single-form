@@ -1,112 +1,113 @@
-<div class="data-basic">
-  <app-section-header title="Dane przedsiębiorstwa"></app-section-header>
+<div class="container">
+  <div class="data-basic">
 
-  <form
-    [formGroup]="formGroup"
-  >
-    <div class="data-company">
-      <div class="left-column">
+    <app-section-header title="Dane przedsiębiorstwa"></app-section-header>
 
-        <app-input
-          type="text"
-          name="companyName"
-          label="Nazwa przedsiębiorstwa"
-          [control]="formGroup.controls.companyName"
-        >
-        </app-input>
+    <form
+      [formGroup]="formGroup"
+    >
+      <div class="data-company">
+        <div class="left-column">
 
-        <app-input
-          type="text"
-          name="street"
-          label="Ulica"
-          [control]="formGroup.controls.street"
-        >
-        </app-input>
+          <app-input
+            type="text"
+            name="companyName"
+            label="Nazwa przedsiębiorstwa"
+            [control]="formGroup.controls.companyName"
+          >
+          </app-input>
 
-        <app-input
-          type="text"
-          name="country"
-          label="Kraj/kod pocztowy/miasto"
-          [control]="formGroup.controls.country"
-        >
-        </app-input>
+          <app-input
+            type="text"
+            name="street"
+            label="Ulica"
+            [control]="formGroup.controls.street"
+          >
+          </app-input>
 
-        <app-input
-          type="text"
-          name="nip"
-          label="NIP"
-          [control]="formGroup.controls.nip"
-        >
-        </app-input>
+          <app-input
+            type="text"
+            name="country"
+            label="Kraj/kod pocztowy/miasto"
+            [control]="formGroup.controls.country"
+          >
+          </app-input>
 
-        <app-input
-          type="text"
-          name="contact"
-          label="Osoba do kontaktu"
-          [control]="formGroup.controls.contact"
-        >
-        </app-input>
+          <app-input
+            type="text"
+            name="nip"
+            label="NIP"
+            [control]="formGroup.controls.nip"
+          >
+          </app-input>
+
+          <app-input
+            type="text"
+            name="contact"
+            label="Osoba do kontaktu"
+            [control]="formGroup.controls.contact"
+          >
+          </app-input>
+        </div>
+
+        <div class="right-column">
+            <app-input
+              type="text"
+              name="telephone"
+              label="Telefon/Fax"
+              [control]="formGroup.controls.telephone"
+            >
+            </app-input>
+
+            <app-input
+              type="text"
+              name="telephone24"
+              label="Numer telefonu 24/7"
+              [control]="formGroup.controls.telephone24"
+            >
+            </app-input>
+
+            <app-input
+              type="text"
+              name="manager"
+              label="Manager ds. Zarządzania krysysowego"
+              [control]="formGroup.controls.manager"
+            >
+            </app-input>
+
+            <app-input
+              type="text"
+              name="email"
+              label="Email"
+              [control]="formGroup.controls.email"
+            >
+            </app-input>
+
+            <app-input
+              type="text"
+              name="krs"
+              label="KRS/CEIDG"
+              [control]="formGroup.controls.krs"
+            >
+            </app-input>
+
+            <app-checkbox
+              name="checkbox1"
+              [control]="formGroup.controls.checkbox1"
+            >
+              Oświadczam, że znam i akceptuję postanowienia
+            </app-checkbox>
+
+        </div>
       </div>
 
-      <div class="right-column">
-          <app-input
-            type="text"
-            name="telephone"
-            label="Telefon/Fax"
-            [control]="formGroup.controls.telephone"
-          >
-          </app-input>
+      <button
+        class="btn btn-primary"
+        type="button"
+        (click)="onSubmit()"
+      > Wyślij ankietę <i class="icon-art smaller">arrow_right</i>
+      </button>
 
-          <app-input
-            type="text"
-            name="telephone24"
-            label="Numer telefonu 24/7"
-            [control]="formGroup.controls.telephone24"
-          >
-          </app-input>
-
-          <app-input
-            type="text"
-            name="manager"
-            label="Manager ds. Zarządzania krysysowego"
-            [control]="formGroup.controls.manager"
-          >
-          </app-input>
-
-          <app-input
-            type="text"
-            name="email"
-            label="Email"
-            [control]="formGroup.controls.email"
-          >
-          </app-input>
-
-          <app-input
-            type="text"
-            name="krs"
-            label="KRS/CEIDG"
-            [control]="formGroup.controls.krs"
-          >
-          </app-input>
-
-          <app-checkbox
-            name="checkbox1"
-            [control]="formGroup.controls.checkbox1"
-          >
-            Oświadczam, że znam i akceptuję postanowienia
-          </app-checkbox>
-
-      </div>
-    </div>
-
-    <button
-      class="btn btn-primary"
-      type="button"
-      (click)="onSubmit()"
-    > Wyślij ankietę <i class="icon-art smaller">arrow_right</i>
-    </button>
-  </form>
-
-
-
+    </form>
+  </div>
 </div>

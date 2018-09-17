@@ -11,7 +11,7 @@ export const landingPageRoutes: Routes = [
         component: PlaygroundComponent,
     },
     {
-        path: 'result',
+        path: 'company-data/result',
         component: ResultComponent,
     },
     {
